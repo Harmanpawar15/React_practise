@@ -102,6 +102,7 @@ catch (error){
                 slug 
     
             )
+            
         }
         catch(error){
             console.log("Appwrite service :: getPost :: error", error)
