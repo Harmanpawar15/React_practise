@@ -27,6 +27,7 @@ export class AuthService{
 
            if(userAccount){
             // calls other method
+            return this.login({email, password});
 
            }
            else {
@@ -43,7 +44,7 @@ export class AuthService{
     // method to login:
     async login({email,password}){
         try{
-           return   await this.account.createEmailPasswordSession(email,password)
+           return   await this.account.createEmailPasswordSession(email,password);
 
         }
  catch(error){
@@ -56,7 +57,7 @@ export class AuthService{
     // method to  get current use:
     async getCurrentUser(){
         try{
-            await this.account.get()
+            return  await this.account.get()
         }
         catch (error){
 

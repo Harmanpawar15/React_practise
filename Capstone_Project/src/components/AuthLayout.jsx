@@ -7,9 +7,10 @@ import {useNavigate} from 'react-router-dom'
     children,
     authentication = true
  }) 
+
  {
     const navigate= useNavigate();
-    const [loader, setLoader] = useState('')
+    const [loader, setLoader] = useState(true)
     const authStatus= useSelector(state=>state.auth.status)
 
     useEffect(() => {
@@ -20,6 +21,7 @@ import {useNavigate} from 'react-router-dom'
             navigate("/")
 
         }
+        setLoader(false)
       
     }, [authStatus, authentication, navigate])
     

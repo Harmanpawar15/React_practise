@@ -6,8 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Header() {
 
- 
-  const authStatus = useSelector((state) => state.auth.status)
+  const authStatus = useSelector((state)=>state.auth.status)
 
   const navigate= useNavigate();
 
@@ -60,7 +59,7 @@ function Header() {
             </li>
           ): null
           )}
-          //  only if authStatus is true than show logout button to user:
+         
           
           {authStatus &&(
           <li>
