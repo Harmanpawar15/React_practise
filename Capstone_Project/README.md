@@ -65,12 +65,6 @@
 ![Errors](./screenshots/error1.png)
 
 <br>
-![Errors](./screenshots/error2.png)
-
-<br>
-![Errors](./screenshots/error3.png)
-
-<br>
 
 ![Errors](./screenshots/error4.png)
 
