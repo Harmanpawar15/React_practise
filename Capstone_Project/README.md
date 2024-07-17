@@ -28,15 +28,17 @@
 
 **1.** Login with your credentials or create a new account to start using the blog features.<br>
 **2.** Create, edit, and delete posts as per your requirements.<br>
+ <br>
 
-
-**Screenshots**
+**Screenshots:**
+<br>
 
 **Dashboard**
 
 ![Dashboard](./screenshots/Home.png)
-
 <br>
+
+
 
 **Post Editor**
 
@@ -44,28 +46,29 @@
 
 <br>
 
+
+
 **Add Post**
 
 ![Add Post](./screenshots/AddPost.png)
-
+<br>
+![Add Post](./screenshots/addpost2.png)
 <br>
 
-![Add Post](./screenshots/addpost2.png)
 
 <br>
 
 **Read Post**
 
 ![Read Post](./screenshots/readpost.png)
-
 <br>
+
+
 
 **Errors**
 
 ![Errors](./screenshots/error1.png)
-
 <br>
-
 ![Errors](./screenshots/error4.png)
 
 
