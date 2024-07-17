@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import { login as authLogin } from '../store/authSlice'
@@ -7,40 +6,25 @@ import {useDispatch} from "react-redux"
 import authService from "../appwrite/auth"
 import {useForm} from "react-hook-form"
 
-
 function Login() {
-    const navigate=useNavigate();
-    const dispatch=useDispatch();
-    const{register, handleSubmit}=useForm()
-    const [error, setError]=useState("");
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const {register, handleSubmit} = useForm()
+    const [error, setError] = useState("")
 
-
-    const login = async(data)=>{
-      setError(" ")
-    try{
-  
-      //Attempt to Log In:
-      const session= await authService.login(data)
-  
-      //If Login Successful:
-      if(session) {
-  
-       // Fetching Current User:
-       const userData= await authService.getCurrentUser()
-      }
-      if (userData)
-      {
-        //Update Global State with User Data
-        dispatch(authLogin(userData));
-        navigate("/")
-  
-      }
+    const login = async(data) => {
+        setError("")
+        try {
+            const session = await authService.login(data)
+            if (session) {
+                const userData = await authService.getCurrentUser()
+                if(userData) dispatch(authLogin(userData));
+                navigate("/")
+            }
+        } catch (error) {
+            setError(error.message)
+        }
     }
-  
-    catch(error){
-      setError(error.message)
-    }
-  }
 
   return (
     <div
@@ -96,4 +80,4 @@ function Login() {
   )
 }
 
-export default Login;
+export default Login
